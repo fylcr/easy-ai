@@ -1,3 +1,3 @@
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-Invoke-RestMethod -Uri https://cdn.jsdelivr.net/gh/fylcr/easy-ai/OmniVoice/setup.ps1 | Invoke-Expression
+Invoke-RestMethod -Uri https://hk.gh-proxy.org/https://github.com/fylcr/easy-ai/raw/refs/heads/main/OmniVoice/setup2.ps1 | Invoke-Expression
