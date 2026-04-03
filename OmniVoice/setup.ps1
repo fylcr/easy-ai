@@ -1,4 +1,4 @@
-﻿Add-Type -AssemblyName System.Windows.Forms
+Add-Type -AssemblyName System.Windows.Forms
 
 function Select-InstallPath {
     $topForm = New-Object System.Windows.Forms.Form
