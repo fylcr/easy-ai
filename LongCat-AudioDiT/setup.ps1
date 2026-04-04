@@ -58,15 +58,15 @@ function Install-OmniVoice {
     )
 
     # ==================== 路径定义 ====================
-    $downloadUrl    = "https://hk.gh-proxy.org/https://github.com/k2-fsa/OmniVoice/archive/refs/heads/master.zip"
+    $downloadUrl    = "https://gh-proxy.org/https://github.com/HildaM/LongCat-AudioDiT-Web/archive/refs/heads/main.zip"
     $uvDownloadUrl  = "https://releases.astral.sh/github/uv/releases/download/0.11.3/uv-x86_64-pc-windows-msvc.zip"
 
-    $tempZip        = Join-Path $env:TEMP "OmniVoice-master.zip"
+    $tempZip        = Join-Path $env:TEMP "LongCat-AudioDiT-Web-main"
     $tempUvZip      = Join-Path $env:TEMP "uv-temp.zip"
     $tempUvDir      = Join-Path $env:TEMP "uv-temp"
 
-    $oldName        = Join-Path $InstallPath "OmniVoice-master"
-    $newName        = Join-Path $InstallPath "OmniVoice"
+    $oldName        = Join-Path $InstallPath "LongCat-AudioDiT-Web-main"
+    $newName        = Join-Path $InstallPath "LongCat-AudioDiT"
 
     # ==================== 检查目标文件夹 ====================
     if (Test-Path $newName) {
@@ -100,7 +100,7 @@ function Install-OmniVoice {
     # ==================== [1/7] 下载 OmniVoice ====================
     Write-Host ""
     Write-Host "========================================" -ForegroundColor Cyan
-    Write-Host " [1/7] 正在下载 OmniVoice 源码 ..." -ForegroundColor Cyan
+    Write-Host " [1/7] 正在下载 LongCat-AudioDiT 源码 ..." -ForegroundColor Cyan
     Write-Host "========================================" -ForegroundColor Cyan
     Write-Host "下载地址: $downloadUrl" -ForegroundColor Gray
     Write-Host ""
@@ -108,7 +108,7 @@ function Install-OmniVoice {
     try {
         $ProgressPreference = 'SilentlyContinue'
         Invoke-WebRequest -Uri $downloadUrl -OutFile $tempZip -UseBasicParsing
-        Write-Host "✅ OmniVoice 源码下载完成！" -ForegroundColor Green
+        Write-Host "✅ LongCat-AudioDiT 源码下载完成！" -ForegroundColor Green
     }
     catch {
         Write-Host "❌ 下载失败: $_" -ForegroundColor Red
@@ -120,7 +120,7 @@ function Install-OmniVoice {
     # ==================== [2/7] 解压并重命名 ====================
     Write-Host ""
     Write-Host "========================================" -ForegroundColor Cyan
-    Write-Host " [2/7] 正在解压并安装 OmniVoice ..." -ForegroundColor Cyan
+    Write-Host " [2/7] 正在解压并安装 LongCat-AudioDiT ..." -ForegroundColor Cyan
     Write-Host "========================================" -ForegroundColor Cyan
     Write-Host "安装目标: $newName" -ForegroundColor Gray
     Write-Host ""
